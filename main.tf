@@ -9,11 +9,6 @@ terraform {
   required_version = ">= 1.0.9"
 }
 
-provider "aws" {
-  profile = "default"
-  region  = "ap-south-1"
-}
-
 resource "aws_instance" "app_server" {
   ami           = "ami-0902b0be1c5a22a55"
   instance_type = "t2.micro"
